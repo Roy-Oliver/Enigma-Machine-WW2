@@ -5,14 +5,14 @@ The ELECTRICITY flow is from KeyBoard -> PlugBoard -> RotorI -> RotorII -> Rotor
     RotorIII -> RotorII -> RotorI -> PlugBoard -> Bulb
 """
 from alphabet_represent import represent
-from reflector_types import *
+from reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin
 from plugboard import Plugboard
 from rotor_set import RotorSet
 
 
 class EnigmaMachine:
     def __init__(self, rotor_settings, plugboard_settings, reflector: object):
-        # Initialize the Enigma Mahcine
+        # Initialize the Enigma Machine
         self.rotor_set = RotorSet(rotor_settings)
         self.reflector = reflector
         self.plugboard = Plugboard(plugboard_settings)
@@ -24,7 +24,7 @@ class EnigmaMachine:
         if letter in self.plugboard.letter_pairs:
             plugboard_output_1 = self.plugboard.plug(letter)
         else:
-            plugboard_output_1 = letter
+            plugboard_output_1 = letter # If there is no connection in plugboard, return the letter
 
         # Feed plugboard output to Rotor Set(First pass from right to left):
         rotor_output_1 = self.rotor_set.right_to_left(plugboard_output_1)
@@ -39,7 +39,7 @@ class EnigmaMachine:
         if rotor_output_2 in self.plugboard.letter_pairs:
             plugboard_output_2 = self.plugboard.plug(rotor_output_2)
         else:
-            plugboard_output_2 = rotor_output_2
+            plugboard_output_2 = rotor_output_2 # If there is no connection in plugboard, return the letter
 
         # return the result
         return plugboard_output_2

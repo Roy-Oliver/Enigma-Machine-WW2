@@ -54,7 +54,7 @@ class Rotor:
 class RotorI(Rotor):
     """Models an Enigma Rotor I"""
 
-    turnover = 16 # The letter 'Q'
+    turnover = 16  # The letter 'Q'
     wiring = "EKMFLGDQVZNTOWYHXUSPAIBRCJ"
 
     def __init__(self, window_position, ring_setting, order):
@@ -63,7 +63,7 @@ class RotorI(Rotor):
 class RotorII(Rotor):
     """Models an Enigma Rotor II"""
 
-    turnover = 4 # The Letter 'E'
+    turnover = 4  # The Letter 'E'
     wiring = "AJDKSIRUXBLHWTMCQGZNPYFVOE"
 
     def __init__(self, window_position, ring_setting, order):
@@ -72,7 +72,7 @@ class RotorII(Rotor):
 class RotorIII(Rotor):
     """Models an Enigma Rotor II"""
 
-    turnover = 21 # The letter 'V'
+    turnover = 21  # The letter 'V'
     wiring = "BDFHJLCPRTXVZNYEIWGAKMUSQO"
 
     def __init__(self, window_position, ring_setting, order):
@@ -81,7 +81,7 @@ class RotorIII(Rotor):
 class RotorIV(Rotor):
     """Models an Enigma Rotor IV"""
 
-    turnover = 9 # The letter 'J'
+    turnover = 9  # The letter 'J'
     wiring = "ESOVPZJAYQUIRHXLNFTGKDCMWB"
 
     def __init__(self, window_position, ring_setting, order):
@@ -90,7 +90,7 @@ class RotorIV(Rotor):
 class RotorV(Rotor):
     """Models an Enigma Rotor V"""
 
-    turnover = 25 # The letter 'Z'
+    turnover = 25  # The letter 'Z'
     wiring = "VZBRGITYUPSDNHLXAWMJQOFECK"
 
     def __init__(self, window_position, ring_setting, order):

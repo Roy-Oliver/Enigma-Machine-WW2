@@ -1,7 +1,7 @@
-from rotor_types import *
+from rotor_types import RotorI, RotorII, RotorIII, RotorIV, RotorV
 
 class RotorSet:
-    """This class models a Rotor Set. This includes the order of rotors, types of rotors and settings of the rotors"""
+    """This class models a WW2 Enigma Rotor Set. This includes the order of rotors, types of rotors and settings of the rotors"""
     def __init__(self, rotors: list):
         # Make a list of rotor objects
         self.rotors = []

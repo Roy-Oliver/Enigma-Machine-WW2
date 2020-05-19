@@ -21,7 +21,7 @@ if __name__ == '__main__':
     plugboard_settings = []
 
     # Ask for first letter
-    letters = input(f"\nType the letter pairs (e.g. AB CD EF). Type 'None' for blank plugboard: ")
+    letters = input(f"\nType the plugboard letter pairs (e.g. AB CD EF). Type 'None' for blank plugboard: ")
 
     # Populate plugboard settings
     letters = letters.split()

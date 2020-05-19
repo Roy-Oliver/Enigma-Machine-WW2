@@ -33,5 +33,6 @@ if __name__ == '__main__':
     # Uncomment the following line if you want command line interaction
     # encode_decode(enigma_machine)
     message = "zpbisehkwmfoqasflctixnaawwxjsufhzwtfzheybbkswxgnpmqwoqehbgpkdyuqjtmzzhzewvbvfhjjbhykgcfuceayzhlhwkuamdgtkaqummretdkplleszkikanfqvpoitcunpfoqlwvxzpxrllftssazgcmrxnreccnmuvmfvfgxpkoeealmvpvysriyfuubnpkttdgvdrwhnlfcyhczxhwpczduhpzlwscmfnnwaiezwmwtyafvytuhnfpflpdlcpsrimdpilmqaeabfvropbhxnynbefstqkdyzesyu"
-    converted_text = [enigma_machine.encrypt_decrypt(represent(i))for i in message]
-    print("".join(converted_text))
+    message = message.replace(" ", "")  # Remove the spaces
+    converted_text = [enigma_machine.encrypt_decrypt(represent(i))for i in message]  # Make a list of encrypted or decrypted letters
+    print("".join(converted_text))  # Join list into a single string

@@ -1,4 +1,4 @@
-from alphabet_represent import represent
+from components.alphabet_represent import represent
 
 class Plugboard:
     """ Models a plugboard"""

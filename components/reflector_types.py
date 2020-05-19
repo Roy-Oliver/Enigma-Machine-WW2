@@ -1,6 +1,6 @@
 """These classes model different types of reflectors"""
 
-from alphabet_represent import represent
+from components.alphabet_represent import represent
 
 
 class ReflectorA:

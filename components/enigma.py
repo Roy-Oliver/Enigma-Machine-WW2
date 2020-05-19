@@ -1,7 +1,7 @@
-from alphabet_represent import represent
-from plugboard import Plugboard
-from reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin
-from rotor_set import RotorSet
+from components.alphabet_represent import represent
+from components.plugboard import Plugboard
+from components.reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin
+from components.rotor_set import RotorSet
 
 
 class EnigmaMachine:

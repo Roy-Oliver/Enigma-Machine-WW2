@@ -1,5 +1,5 @@
-from rotor_types import RotorI, RotorII, RotorIII, RotorIV, RotorV
-from alphabet_represent import represent
+from components.rotor_types import RotorI, RotorII, RotorIII, RotorIV, RotorV
+from components.alphabet_represent import represent
 
 
 class RotorSet:

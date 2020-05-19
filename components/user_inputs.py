@@ -1,6 +1,6 @@
 """Functions that ask for user input"""
 
-from alphabet_represent import represent
+from components.alphabet_represent import represent
 
 
 def set_rotor():

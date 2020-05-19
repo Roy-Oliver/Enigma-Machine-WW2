@@ -6,9 +6,9 @@ Reflectors available: A, B, C, BThin, CThin
 Edit out code below and/or run this file. An example is pre-filled
 """
 
-from enigma import EnigmaMachine
-from user_inputs import set_rotor, set_reflector, set_plugboard, encode_decode
-from alphabet_represent import represent
+from components.enigma import EnigmaMachine
+from components.alphabet_represent import represent
+from components.user_inputs import set_rotor, set_reflector, set_plugboard, encode_decode
 
 if __name__ == '__main__':
     # Rotor Settings

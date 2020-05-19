@@ -45,8 +45,8 @@ class EnigmaMachine:
         return plugboard_output_2
 
 
-rotor_settings = [['RotorII', 1, 9], ['RotorI', 0, 16], ['RotorIII', 2, 9]]
+rotor_settings = [['RotorII', 0, 0], ['RotorI', 0, 0], ['RotorIII', 0, 0]]
 plugboard_settings = [[represent('A'), represent('B')], [represent('C'), represent('D')], [represent('E'), represent('F')]]
-Enigma_Test = EnigmaMachine(rotor_settings, plugboard_settings, ReflectorA())
-for i in "LSRKIKZGMCQB":
+Enigma_Test = EnigmaMachine(rotor_settings, plugboard_settings, ReflectorB())
+for i in "WOKNDQ":
     print(represent(Enigma_Test.encrypt_decrypt(represent(i))))

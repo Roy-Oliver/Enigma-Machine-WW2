@@ -1,7 +1,8 @@
 from enigma import EnigmaMachine
 from alphabet_represent import represent
+from enigma import EnigmaMachine
 
-if __name__ =='__main__':
+if True:
 
     # Populate rotor setting
     rotors_settings = []
@@ -15,6 +16,40 @@ if __name__ =='__main__':
         rotors_settings.append([rotor_type, int(rotor_start_position), represent(rotor_ring_setting)])
 
     # Choose a reflector
-    reflector_type = input(f"Choose reflector(available: A, B, C, BThin, CThin): ")
+    reflector_type = input("Choose reflector(available: A, B, C, BThin, CThin): ")
 
-    # Make
+    # Plugboard settings
+    count = 1
+    letter_1 = ""
+    plugboard_settings = []
+    while True:
+        # Ask for first letter
+        letter_1 = input(f"Type the first letter in pair {count}. Type exit to end selection: ")
+
+        # Ask if user wants to exit
+        if letter_1 == 'exit':
+            break
+
+        # Ask for second letter
+        letter_2 = input(f"Type the second letter in pair {count}.")
+
+        # Populate plugboard settings
+        plugboard_settings.append(represent(letter_1), represent(letter_2))
+
+        # Increment counter by 1
+        count += 1
+
+    # Create an Enigma Machine Object
+    enigma_machine = EnigmaMachine(rotors_settings,plugboard_settings, reflector_type)
+
+    # Encode or Decode the message
+    while True:
+        message = input("Type your message. Type 'exit' to exit: ")
+
+        if message == 'exit':
+            break
+        else:
+            # Print the message
+            print("".join([enigma_machine.encrypt_decrypt(letter) for letter in message]))
+
+

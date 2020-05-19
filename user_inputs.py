@@ -1,3 +1,5 @@
+"""Functions that ask for user input"""
+
 from alphabet_represent import represent
 
 
@@ -31,12 +33,11 @@ def set_plugboard():
     return letters
 
 
-
 def encode_decode(enigma_machine):
     # Encode or Decode the message
     while True:
         message = input("\nType your message. Type 'exit' to exit: ")
-        message = message.replace(" ", "") # Remove spaces in message
+        message = message.replace(" ", "")  # Remove spaces in message
         if message == 'exit':
             break
         else:

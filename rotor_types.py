@@ -1,14 +1,16 @@
 from alphabet_represent import represent
 
+
 class Rotor:
     """Models an Enigma rotor"""
+
     def __init__(self, window_position: int, ring_setting: int, order: int):
         self.window_position = window_position  # Position of the rotor as seen from the window
         self.ring_setting = ring_setting  # Position of the 'notch' in the rotor
-        self.order = order  #  Order of the rotor from 1 to 3, where 1 is the leftmost, 2 is the middle and 3 is the rightmost
+        self.order = order  # Order of the rotor from 1 to 3, where 1 is the leftmost and 3 is the rightmost
 
     def move(self):
-        # Moves the window position upwards. For example, A moves to B in the window. Include mod 26 to cycle through letters
+        # Moves the window position upwards. For example, A moves to B in the window.
         self.window_position = (self.window_position + 1) % 26
 
     def right_to_left(self, letter: int):
@@ -51,6 +53,7 @@ class Rotor:
         # Return the letter
         return plugboard
 
+
 class RotorI(Rotor):
     """Models an Enigma Rotor I"""
 
@@ -59,6 +62,7 @@ class RotorI(Rotor):
 
     def __init__(self, window_position, ring_setting, order):
         super().__init__(window_position, ring_setting, order)
+
 
 class RotorII(Rotor):
     """Models an Enigma Rotor II"""
@@ -69,6 +73,7 @@ class RotorII(Rotor):
     def __init__(self, window_position, ring_setting, order):
         super().__init__(window_position, ring_setting, order)
 
+
 class RotorIII(Rotor):
     """Models an Enigma Rotor II"""
 
@@ -78,6 +83,7 @@ class RotorIII(Rotor):
     def __init__(self, window_position, ring_setting, order):
         super().__init__(window_position, ring_setting, order)
 
+
 class RotorIV(Rotor):
     """Models an Enigma Rotor IV"""
 
@@ -86,6 +92,7 @@ class RotorIV(Rotor):
 
     def __init__(self, window_position, ring_setting, order):
         super().__init__(window_position, ring_setting, order)
+
 
 class RotorV(Rotor):
     """Models an Enigma Rotor V"""

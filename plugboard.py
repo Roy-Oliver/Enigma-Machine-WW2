@@ -16,4 +16,5 @@ class Plugboard:
             self.letter_pairs[second_letter] = first_letter
 
     def plug(self, letter):
+        # Returns the letter pair based on the plugboard settings
         return self.letter_pairs[letter]

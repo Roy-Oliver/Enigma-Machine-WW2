@@ -1,17 +1,12 @@
-"""
-The Wehrmacht Enigma I used by the Army and Air Force during World War 2
-
-The ELECTRICITY flow is from KeyBoard -> PlugBoard -> RotorI -> RotorII -> RotorIII -> Reflector ->
-    RotorIII -> RotorII -> RotorI -> PlugBoard -> Bulb
-"""
 from alphabet_represent import represent
-from reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin
 from plugboard import Plugboard
+from reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin
 from rotor_set import RotorSet
-from alphabet_represent import represent
 
 
 class EnigmaMachine:
+    """Creates an Enigma Machine with a Rotor Set, Reflector and Plugboard"""
+
     def __init__(self, rotor_settings, plugboard_settings, reflector):
         # Initialize the Enigma Machine Rotors and Plugboards
         self.rotor_set = RotorSet(rotor_settings)
@@ -29,7 +24,6 @@ class EnigmaMachine:
         else:
             self.reflector = ReflectorCThin()
 
-
     def encrypt_decrypt(self, letter: int):
         # Encrypt or decrypts a letter
 
@@ -37,7 +31,7 @@ class EnigmaMachine:
         if letter in self.plugboard.letter_pairs:
             plugboard_output_1 = self.plugboard.plug(letter)
         else:
-            plugboard_output_1 = letter # If there is no connection in plugboard, return the letter
+            plugboard_output_1 = letter  # If there is no connection in plugboard, return the letter
 
         # Feed plugboard output to Rotor Set(First pass from right to left):
         rotor_output_1 = self.rotor_set.right_to_left(plugboard_output_1)
@@ -52,8 +46,7 @@ class EnigmaMachine:
         if rotor_output_2 in self.plugboard.letter_pairs:
             plugboard_output_2 = self.plugboard.plug(rotor_output_2)
         else:
-            plugboard_output_2 = rotor_output_2 # If there is no connection in plugboard, return the letter
+            plugboard_output_2 = rotor_output_2  # If there is no connection in plugboard, return the letter
 
         # return the result as letter
-        return represent(plugboard_output_2) # Represent is added to Output the letter as an alphabetic letter
-
+        return represent(plugboard_output_2)  # Represent is added to Output the letter as an alphabetic letter

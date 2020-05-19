@@ -3,6 +3,7 @@ A program that simulates the Wehrmacht Enigma M3 used by the Nazi Army and Air F
 Settings Available: Rotor (type, starting position, ring setting), Reflector (Types), Plugboard (Letter pairs)
 
 Rotor types available : I, II, III, IV, V
+
 Reflectors available: A, B, C, BThin, CThin
 
 Instructions:

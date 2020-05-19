@@ -7,7 +7,6 @@ Edit out code below and/or run this file. An example is pre-filled
 """
 
 from components.enigma import EnigmaMachine
-from components.alphabet_represent import represent
 from components.user_inputs import set_rotor, set_reflector, set_plugboard, encode_decode
 
 if __name__ == '__main__':
@@ -40,10 +39,6 @@ if __name__ == '__main__':
 
     # Encode or Decode the message
     # Accepts lowercase letters and removes the spaces from the string. Non alphabetic characters are not allowed.
-    # Uncomment the following line if you want command line interaction
-    # encode_decode(enigma_machine)
-    message = " zpbisehkwmfoqasflctixnaawwxjsufhzwtfzheybbkswxgnpmqwoqehbgpkdyuqjtmzzhzewvbv"
-    message = message.replace(" ", "")  # Remove the spaces
-    converted_text = [enigma_machine.encrypt_decrypt(represent(i)) for i in
-                      message]  # Make a list of encrypted or decrypted letters
-    print("".join(converted_text))  # Join list into a single string
+    message = "zpbisehkwmfoqasflctixnaawwxjsufhzwtfzheybbkswxgnpmqwoqehbgpkdyuqjtmzzhzewvbv"
+    decoded_message = encode_decode(enigma_machine, message)
+    print(decoded_message)

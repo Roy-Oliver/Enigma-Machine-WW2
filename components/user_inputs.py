@@ -33,14 +33,10 @@ def set_plugboard():
     return letters
 
 
-def encode_decode(enigma_machine):
+def encode_decode(enigma_machine, message):
     # Encode or Decode the message
-    while True:
-        message = input("\nType your message. Type 'exit' to exit: ")
-        message = message.replace(" ", "")  # Remove spaces in message
-        if message == 'exit':
-            break
-        else:
-            # Print the message
-            converted_text = [enigma_machine.encrypt_decrypt(represent(i)) for i in message]
-            print("".join(converted_text))
+    message = message.replace(" ", "")  # Remove spaces in message
+    converted_text = [enigma_machine.encrypt_decrypt(represent(i)) for i in message]
+
+    # Return the Message
+    return "".join(converted_text)

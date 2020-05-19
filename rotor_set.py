@@ -8,23 +8,23 @@ class RotorSet:
 
         # Populate self.rotors with rotor objects
         for order, rotor in enumerate(rotors):
-            if rotor[0] == "RotorI":
+            if rotor[0] == "I":
                 window_position = rotor[1]
                 ring_setting = rotor[2]
                 self.rotors.append(RotorI(window_position, ring_setting, order))
-            elif rotor[0] == "RotorII":
+            elif rotor[0] == "II":
                 window_position = rotor[1]
                 ring_setting = rotor[2]
                 self.rotors.append(RotorII(window_position, ring_setting, order))
-            elif rotor[0] == "RotorIII":
+            elif rotor[0] == "III":
                 window_position = rotor[1]
                 ring_setting = rotor[2]
                 self.rotors.append(RotorIII(window_position, ring_setting, order))
-            elif rotor[0] == "RotorIV":
+            elif rotor[0] == "IV":
                 window_position = rotor[1]
                 ring_setting = rotor[2]
                 self.rotors.append(RotorIV(window_position, ring_setting, order))
-            elif rotor[0] == "RotorV":
+            elif rotor[0] == "V":
                 window_position = rotor[1]
                 ring_setting = rotor[2]
                 self.rotors.append(RotorV(window_position, ring_setting, order))
@@ -42,7 +42,7 @@ class RotorSet:
             self.rotors[0].move()
 
     def right_to_left(self, letter):
-        # Move the rotor
+        # Move the rotor. Happens only once during typing.
         self.rotorset_move()
 
         # Encode from right to left on third rotor

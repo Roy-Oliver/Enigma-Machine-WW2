@@ -11,11 +11,23 @@ from rotor_set import RotorSet
 
 
 class EnigmaMachine:
-    def __init__(self, rotor_settings, plugboard_settings, reflector: object):
-        # Initialize the Enigma Machine
+    def __init__(self, rotor_settings, plugboard_settings, reflector):
+        # Initialize the Enigma Machine Rotors and Plugboards
         self.rotor_set = RotorSet(rotor_settings)
-        self.reflector = reflector
         self.plugboard = Plugboard(plugboard_settings)
+
+        # Initialize the reflector object
+        if reflector == "A":
+            self.reflector = ReflectorA()
+        elif reflector == "B":
+            self.reflector = ReflectorB()
+        elif reflector == "C":
+            self.reflector = ReflectorC()
+        elif reflector == "BThin":
+            self.reflector = ReflectorBThin()
+        else:
+            self.reflector = ReflectorCThin()
+
 
     def encrypt_decrypt(self, letter: int):
         # Encrypt or decrypts a letter

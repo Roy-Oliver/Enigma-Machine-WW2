@@ -8,6 +8,7 @@ from alphabet_represent import represent
 from reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin
 from plugboard import Plugboard
 from rotor_set import RotorSet
+from alphabet_represent import represent
 
 
 class EnigmaMachine:
@@ -53,6 +54,6 @@ class EnigmaMachine:
         else:
             plugboard_output_2 = rotor_output_2 # If there is no connection in plugboard, return the letter
 
-        # return the result
-        return plugboard_output_2
+        # return the result as letter
+        return represent(plugboard_output_2) # Represent is added to Output the letter as an alphabetic letter
 

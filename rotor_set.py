@@ -20,6 +20,14 @@ class RotorSet:
                 window_position = rotor[1]
                 ring_setting = rotor[2]
                 self.rotors.append(RotorIII(window_position, ring_setting, order))
+            elif rotor[0] == "RotorIV":
+                window_position = rotor[1]
+                ring_setting = rotor[2]
+                self.rotors.append(RotorIV(window_position, ring_setting, order))
+            elif rotor[0] == "RotorV":
+                window_position = rotor[1]
+                ring_setting = rotor[2]
+                self.rotors.append(RotorV(window_position, ring_setting, order))
 
     def rotorset_move(self):
         # Turn the third rotor

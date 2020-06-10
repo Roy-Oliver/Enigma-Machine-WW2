@@ -11,7 +11,7 @@ from components.user_inputs import set_rotor, set_reflector, set_plugboard, enco
 
 if __name__ == '__main__':
     # Rotor Settings
-    # Format: [[rotor type: str, start position: str, ring setting: str]...]
+    # Format from left to right: [[rotor type: str, start position: str, ring setting: str]...]
     # Rotor types available : I, II, III, IV, V
     # Type rotor settings in capital letters, otherwise there may be an error
     # Uncomment the following line if you want command line interaction

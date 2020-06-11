@@ -1,7 +1,7 @@
 """
 A program that simulates the Wehrmacht Enigma used by the Nazi Army and Air Force during World War 2
 Rotor types available : I, II, III, IV, V
-Reflectors available: A, B, C, BThin, CThin
+Reflectors available: A, B, C, BThin, CThin, Modified
 
 Edit out code below and/or run this file. An example is pre-filled
 """

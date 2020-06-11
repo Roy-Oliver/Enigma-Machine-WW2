@@ -21,7 +21,7 @@ rotors_settings = [["I", "E", "E"], ["III", "Q", "F"], ["IV", "P", "I"]]
 # Format: reflector: str
 # Reflectors available: A, B, C, BThin, CThin
 # Available extra reflector: Modified
-# "Modified" reflector occasionally reflects a letter to itself, thus a letter can be encrypted into itself)
+# "Modified" reflector occasionally reflects a letter to itself, thus a letter can be encrypted into itself
 # Type reflector settings in capital letters, otherwise there may be an error
 # Uncomment the following line if you want command line interaction
 # reflector_type = set_reflector()

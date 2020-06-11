@@ -1,6 +1,6 @@
 from components.alphabet_represent import represent
 from components.plugboard import Plugboard
-from components.reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin
+from components.reflector_types import ReflectorA, ReflectorB, ReflectorC, ReflectorBThin, ReflectorCThin, ModifiedReflector
 from components.rotor_set import RotorSet
 
 
@@ -21,7 +21,9 @@ class EnigmaMachine:
             self.reflector = ReflectorC()
         elif reflector == "BThin":
             self.reflector = ReflectorBThin()
-        else:
+        elif reflector == "Modified":
+            self.reflector = ModifiedReflector()
+        elif reflector == "CThin":
             self.reflector = ReflectorCThin()
 
     def encrypt_decrypt(self, letter: int):
